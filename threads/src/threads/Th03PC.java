@@ -3,7 +3,7 @@ package threads;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Th02PC {
+public class Th03PC {
 
 	private static final Queue<Integer> buffer = new LinkedList<>();
 	private static final int CAPACIDAD = 5;

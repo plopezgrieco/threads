@@ -68,7 +68,7 @@ public class Th01 {
 		th2.start();
 
 		System.out.println(Thread.currentThread().getName());
-
+		
 	}
 
 	public static void m1() {
