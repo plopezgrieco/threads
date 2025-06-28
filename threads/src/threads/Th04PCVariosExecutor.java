@@ -2,8 +2,10 @@ package threads;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
-public class Th03PCVarios {
+public class Th04PCVariosExecutor {
 
 	private static final Queue<Integer> buffer = new LinkedList<>();
 	private static final int CAPACIDAD = 5;
@@ -13,6 +15,8 @@ public class Th03PCVarios {
 	private static final Object LOCK = new Object();
 
 	public static void main(String[] args) {
+
+		ExecutorService executor = Executors.newFixedThreadPool(8);
 
 		Runnable productor = () -> {
 			while (true) {
@@ -67,10 +71,10 @@ public class Th03PCVarios {
 		};
 
 		for (int i = 1; i <= CANT_PROD; i++) {
-			new Thread(productor).start();;
+			executor.submit(productor);
 		}
 		for (int i = 1; i <= CANT_CONS; i++) {
-			new Thread(consumidor).start();;
+			executor.submit(consumidor);
 		}
 	}
 
