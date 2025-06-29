@@ -1,0 +1,38 @@
+HILOS
+Pizarra evolución de los hilos
+	Green Threads (n:1)
+	System, Native o Infrastructure Threads (1:1)
+Java 21 
+	Project Loom
+	Virtual Thread (n:m)
+	Concurrencia estructurada (preview en 21)
+		Varias tareas (ejemplo apis para buscar precios)
+		Si alguna tarea es muy larga y otra falla, no me entero hasta que termine la mas larga. (con esto puede lanzar la excepción fuera)
+		Puedo pedirle que si todas finalicen
+		Si alguna falla
+		La primera que termine 
+			todo esto que me devuelva el resultado
+			puedo analizar la pila de excecpciones
+
+Ejemplos old con Thread y Runnable
+
+Transparencias hasta La Clas Thread (detalles)
+Ejemplo Th01Estados
+Transparencias sync hasta wait / notify
+Ejemplo Th01
+
+Ejemplo Th02Estados
+
+Ejemplo Th03PC
+Ejemplo Th04PCVarios
+Ejemplo Th05PCVariosExecutor
+
+Ej: Th04
+	Th05
+Future
+	Th06
+	Th07
+	
+Ejemplo PC02
+Transparencia ExecutorService
+
